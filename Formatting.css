@@ -5,6 +5,19 @@ body {
 .container {
     background-color: #FFFFFF;
     width: 95vw;
-    height: 91vh;
+    height: max-content;
     margin: 2vw;
 }
+    /*CONTAINERS*/
+    .head {
+        width: 95vw;
+        height: 5vw;
+        background-color: #b3b3b3;
+        padding: 1vw;
+    }
+
+        .title {
+            font-size: 3vw;
+            font-weight: bold;
+            font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+        }
