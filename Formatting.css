@@ -10,15 +10,60 @@ body {
 }
     /*CONTAINERS*/
     .head {
-        width: 95vw;
-        height: 5vw;
+        width: 91vw;
+        height: 4vw;
         background-color: #b3b3b3;
-        padding: 1vw;
+        padding: 2vw;
     }
 
         .title {
+            width: 30vw;
             font-size: 3vw;
             font-weight: bold;
-            font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
-            padding-top: -3vw;
+            font-family: "Orbitron", sans-serif;
+            margin: 0;
+            vertical-align: middle;
         }
+
+        .logo {
+            width: 4vw;
+            height: 4vw;
+            vertical-align: middle;
+            float: left;
+            margin-right: 1.5vw;
+        }
+
+        .nav {
+            display: inline-block;
+            float: right;
+            vertical-align: middle;
+        }
+
+            .nav a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 1.5vw;
+                margin-left: 2vw;
+                font-family: "Arial", sans-serif;
+            }
+
+            .nav a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+
+    .content {
+        width: 91vw;
+        height: max-content;
+        background-color: #e6e6e6;
+        padding: 2vw;
+    }
+
+    .foot {
+        width: 91vw;
+        height: 2vw;
+        background-color: #b3b3b3;
+        padding: 2vw;
+        text-align: center;
+        font-size: 1vw;
+    }
