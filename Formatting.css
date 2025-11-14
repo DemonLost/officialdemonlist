@@ -10,13 +10,16 @@ body {
     /*CONTAINERS*/
     .head {
         display: flex;
+        position: fixed;
         align-items: center;
-        width: 91vw;
+        width: 92vw;
         height: 4vw;
+        margin-left: -0.5vw;
         background-image: linear-gradient(to right, #c9c9c9, #9e9999);
+        box-shadow: 0 0.5vw 0.3vw rgba(0, 0, 0, 0.2);
         padding: 2vw;
         z-index: 10;
-        opacity: 0.90;
+        opacity: 0.85;
     }
 
         .title {
@@ -75,8 +78,9 @@ body {
     }
 
     .foot {
-        width: 91vw;
+        width: 95vw;
         height: 2vw;
+        margin-left: -2.2vw;
         background-color: #b3b3b3;
         padding: 2vw;
         text-align: center;
