@@ -1,5 +1,40 @@
+
+/*COLOR SCHEMES*/
+:root {
+    /* Brand colors */
+    --accent: #2ecc71;       /* Main green */
+    --accent-light: #58e88f; /* Hover, highlights */
+    --accent-dark: #1f8f4c;  /* Shadows, borders */
+
+    /* Grays / neutrals */
+    --bg: #e5e5e5;           /* Main background */
+    --bg-dark: #cfcfcf;       /* Sections / cards */
+    --bg-darker: #b8b8b8;     /* Footer or contrast elements */
+    --bg-darkest: #1f1f1f;    /* Headers or high contrast elements */
+    --bg-darkgreen: #005818; /* Alternative background */
+
+    /* Text */
+    --text-main: #111;
+    --text-light: #444;
+    --text-invert: #ffffff;
+
+    /* Borders */
+    --border-light: #d0d0d0;
+    --border-dark: #888;
+}
+
+
 body {
-    background-color: #000000;
+    background-color: var(--bg-darkest);
+}
+
+.black {
+    position: fixed;
+    width: 100vw;
+    height: 2vw;
+    background-color: var(--bg-darkest);
+    margin-top: -2vw;
+    z-index: 11;
 }
 
 .container {
@@ -97,3 +132,77 @@ body {
             text-align: left;
             margin-left: -1.5vw;
         }
+
+
+/*HOME*/
+
+    .hometitle {
+        width: 93vw;
+        height: max-content;
+        font-size: 3vw;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        text-align: left;
+        margin-bottom: 2vw;
+        margin-top: 10vw;
+        margin-left: -2vw;
+        padding: 1vw;
+        background-color: var(--accent-light);
+
+    }
+
+    .homepara {
+        width: fit-content;
+        height: auto;
+        font-size: 1.5vw;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+        margin-bottom: 2vw;
+        margin-left: 1vw;
+    }
+
+    .competitors {
+        display: flex;
+        width: 91vw;
+        height: auto;
+        text-align: left;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: #888 transparent;
+        scroll-snap-type: x mandatory;
+    }
+
+        .competitor1 {
+            flex: 0 0 auto;
+            width: 20vw;
+            height: auto;
+            padding: 0.5vw;
+            scroll-snap-align: start;
+        }
+        
+            .competitorimage {
+                width: 18vw;
+                height: 18vw;
+                margin-bottom: 1vw;
+            }
+
+            .competitorname {
+                width: 18vw;
+                font-size: 2.5vw;
+                font-family: 'Courier New', Courier, monospace;
+                text-align: center;
+                margin: 0;
+
+            }
+
+            .realname {
+                width: 18vw;
+                height: auto;
+                font-size: 0.8vw;
+                font-family: 'Courier New', Courier, monospace;
+                text-align: center;
+                margin: 0;
+            }
