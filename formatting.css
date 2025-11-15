@@ -2,15 +2,18 @@
 /*COLOR SCHEMES*/
 :root {
     /* Brand colors */
-    --accent: #2ecc71;       /* Main green */
+    --accent-very-light: #a8ffd0; /* Highlights, accents */
     --accent-light: #58e88f; /* Hover, highlights */
+    --accent: #2ecc71;       /* Main green */
+    --accent-slightly-dark: #28b765; /* Buttons, active elements */
     --accent-dark: #1f8f4c;  /* Shadows, borders */
 
     /* Grays / neutrals */
     --bg: #e5e5e5;           /* Main background */
     --bg-dark: #cfcfcf;       /* Sections / cards */
     --bg-darker: #b8b8b8;     /* Footer or contrast elements */
-    --bg-darkest: #1f1f1f;    /* Headers or high contrast elements */
+    --bg-darkest: #363636;    /* Headers or high contrast elements */
+    --bg-black: #000000;    /* Extreme contrast */
     --bg-darkgreen: #005818; /* Alternative background */
 
     /* Text */
@@ -25,14 +28,14 @@
 
 
 body {
-    background-color: var(--bg-darkest);
+    background-color: var(--bg-black);
 }
 
 .black {
     position: fixed;
     width: 100vw;
     height: 2vw;
-    background-color: var(--bg-darkest);
+    background-color: var(--bg-black);
     margin-top: -2vw;
     z-index: 11;
 }
@@ -47,10 +50,10 @@ body {
         display: flex;
         position: fixed;
         align-items: center;
-        width: 92vw;
-        height: 4vw;
-        margin-left: -0.5vw;
-        background-image: linear-gradient(to right, #c9c9c9, #9e9999);
+        width: 100vw;
+        height: 3vw;
+        margin-left: -2vw;
+        background-image: linear-gradient(to right, var(--accent), var(--accent-dark));
         box-shadow: 0 0.5vw 0.3vw rgba(0, 0, 0, 0.2);
         padding: 2vw;
         z-index: 10;
@@ -62,6 +65,7 @@ body {
             font-size: 3vw;
             font-weight: bold;
             font-family: "Orbitron", sans-serif;
+            color: var(--text-invert);
             margin: 0;
             vertical-align: middle;
         }
@@ -73,22 +77,27 @@ body {
             float: left;
             margin-right: 1.5vw;
         }
-     
+
+        .logo-link {
+                text-decoration: none;
+                color: var(--text-invert);
+        }     
 
             .fadingcells {
                 display: inline-block;
-                color: #000000;
+                color: var(--text-invert);
                 font-size: 1.5vw;
                 font-family: 'Times New Roman', Times, serif;
-                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
                 vertical-align: middle;
                 padding: 0.5vw 2vw;
                 text-align: center;
+                cursor: pointer;
             }
 
             .fadingcells a {
                 text-decoration: none;
-                color: #000000;
+                color: var(--text-invert);
             }
 
             .fadingcells:hover {
@@ -97,10 +106,14 @@ body {
                 /*box shadow order (Shadow to right) (Shadow to down) (blur strength) (spread radius)*/
             }
 
+            .fadingcells:hover a{
+                color: var(--text-main);
+            }
+
             .coollittleverticalbar {
                 display: inline-block;
                 font-size: 2vw;
-                color: #000000;
+                color: var(--text-invert);
                 vertical-align: middle;
                 padding: 0 1vw;
             }
@@ -108,7 +121,8 @@ body {
     .content {
         width: 91vw;
         height: max-content;
-        background-color: #e6e6e6;
+        color: var(--text-invert);
+        background-color: var(--bg-darkest);
         opacity: 0.93;
         padding: 2vw;
     }
@@ -117,7 +131,7 @@ body {
         width: 95vw;
         height: 2vw;
         margin-left: -2.2vw;
-        background-color: #b3b3b3;
+        background-image: linear-gradient(to right, var(--accent), var(--accent-dark));
         padding: 2vw;
         text-align: center;
         font-size: 1vw;
@@ -126,7 +140,9 @@ body {
         .credits {
             display: inline-block;
             font-size: 1.5vw;
-            color: #000000;
+            color: var(--text-invert);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
             vertical-align: middle;
             width: 80vw;
             text-align: left;
@@ -137,7 +153,7 @@ body {
 /*HOME*/
 
     .hometitle {
-        width: 93vw;
+        width: 91vw;
         height: max-content;
         font-size: 3vw;
         font-weight: bold;
@@ -145,21 +161,42 @@ body {
         text-align: left;
         margin-bottom: 2vw;
         margin-top: 10vw;
-        margin-left: -2vw;
+        margin-left: 0;
         padding: 1vw;
-        background-color: var(--accent-light);
+        color: var(--text-invert);
+    }
 
+    .hometitlehighlight {
+        color: var(--accent-light);
     }
 
     .homepara {
         width: fit-content;
         height: auto;
         font-size: 1.5vw;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: left;
         margin-bottom: 2vw;
         margin-left: 1vw;
     }
+
+    .homebutton {
+        width: 20vw;
+        height: 4vw;
+        font-size: 1.5vw;
+        font-family: 'Courier New', Courier, monospace;
+        color: var(--text-invert);
+        background-color: var(--accent);
+        border: none;
+        border-radius: 0.5vw;
+        cursor: pointer;
+        margin-left: 1vw;
+        font-weight: bold;
+    }
+
+        .homebutton:hover {
+            background-color: var(--accent-light);
+        }
 
     .competitors {
         display: flex;
@@ -171,7 +208,7 @@ body {
         overflow-y: hidden;
         scroll-behavior: smooth;
         scrollbar-width: thin;
-        scrollbar-color: #888 transparent;
+        scrollbar-color: var(--accent-light) transparent;
         scroll-snap-type: x mandatory;
     }
 
@@ -181,6 +218,12 @@ body {
             height: auto;
             padding: 0.5vw;
             scroll-snap-align: start;
+
+        }
+        
+        .competitor1 a {
+            text-decoration: none;
+            color: var(--text-invert);
         }
         
             .competitorimage {
@@ -195,7 +238,6 @@ body {
                 font-family: 'Courier New', Courier, monospace;
                 text-align: center;
                 margin: 0;
-
             }
 
             .realname {
@@ -206,3 +248,25 @@ body {
                 text-align: center;
                 margin: 0;
             }
+
+.changelogbox {
+    width: 89vw;
+    height: 30vh;
+    background-color: var(--accent-dark);
+    padding: 1vw;
+    margin-top: 2vw;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-light) transparent;
+    scroll-snap-type: y mandatory;
+}
+
+    .changelogentry {
+        width: 85vw;
+        height: auto;
+        font-size: 1.2vw;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+        margin-bottom: 1vw;
+        scroll-snap-align: start;
+    }

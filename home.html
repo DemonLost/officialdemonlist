@@ -11,7 +11,7 @@
 
         <div class="container">
             <div class="head">
-                <img class="logo" src="images/fatwave.png" alt="Fatwave Logo">
+                <a class="logo-link" href="home.html"> <img class="logo" src="images/fatwave.png" alt="Fatwave Logo"> </a>
                 <h1 class="title"> The DemonLost </h1>
 
                 <div class="nav">
@@ -24,14 +24,19 @@
             </div>
 
             <div class="content">
-                <h1 class="hometitle"> Welcome to The DemonLost! </h1>
+                <h1 class="hometitle"> WELCOME TO <span class="hometitlehighlight">DEMONLOST</span> </h1>
                 <p class="homepara"> 
                     The DemonLost is a friend-group-driven list of the hardest demons ever beaten by the players featured. 
                     Our goal is to provide an up-to-date and comprehensive list of the most challenging levels in the game,
-                    along with information about their creators, difficulty ratings, and player achievements. 
+                    along with information about difficulty ratings, and player achievements. I hope you enjoy exploring the
+                    DemonLost as much as I enjoyed creating it!
                 </p>
 
-                <h1 class="hometitle"> Featured Competitors </h1>
+                <button class="homebutton" onclick="location.href='demonlist.html'"> VIEW DEMON LIST </button>
+
+
+
+                <h1 class="hometitle"> FEATURED PLAYERS </h1>
                 <div class="competitors">
                     <div class="competitor1">
                         <img class="competitorimage" src="images/as1nus.png" alt="Competitor 1">
@@ -56,7 +61,6 @@
                         <h2 class="competitorname"> WaxingGibbous </h2>
                         <p class="realname"> (Bienvenido Pablo D. Regala III) </p>
                     </div>
-
                     
 <!-- NOT CONTACTED YET
                     <div class="competitor1">
@@ -70,10 +74,26 @@
                         <h2 class="competitorname"> --- </h2>
                         <p class="realname"> (Emmanuel Andres A. Ong) </p>
                     </div>
-                </div>    
-            </div>
 -->
-            <h1 class="hometitle"> Featured Competitors </h1>
+                
+                    <div class="competitor1">
+                        <a href="submit.html">
+                        <img class="competitorimage" src="images/plus.png" alt="Competitor 1">
+                        <h2 class="competitorname"> You? </h2>
+                        <p class="realname"> Submit a record to be featured! </p>
+                        </a>
+                    </div>
+
+                </div>    
+
+                <h1 class="hometitle"> <span class="hometitlehighlight"> CHANGELOG </span> </h1>
+                <div class="changelogbox">
+                    <p class="changelogentry"> [2025-11-13] Website was Created. </p>
+                    <p class="changelogentry"> [2025-??-??] Website was Finished. </p>
+                </div>
+            </div>
+
+            
 
             <div class="foot">
                 <div class="credits"> Created by Coldaf </div>
@@ -81,5 +101,10 @@
                     <div class="fadingcells"> <a href="contact.html"> Contact </a> </div>
             </div>
         </div>
+
+
+        <script>
+
+        </script>
     </body>
 </html>
