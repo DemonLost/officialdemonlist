@@ -451,6 +451,10 @@ body {
             margin-right: 0.5vw;
         }
 
+        .norecordpfp {
+            display: none;
+        }
+
     .other {
         grid-area: other;
         }
