@@ -15,29 +15,35 @@ const demonlist = [//DATA
     record1:`As1nus`, record1pic:"as1nus", victor1link:"https://www.youtube.com/channel/UCV8Z4f8lXoO6r0kLhH8cX9A",
     record2:"Coldaf", record2pic:"coldaf",
   },
-  {//NINE CIRCLES
-    name: "Nine Circles", 
-    creator: "Zobros"
-  },
   {//JAWBREAKER
     name: "Jawbreaker", 
-    creator: "WOOGI1411"
+    creator: "WOOGI1411",
+    difficulty: "harddemon",
+  },
+  {//NINE CIRCLES
+    name: "Nine Circles", 
+    creator: "Zobros",
+    difficulty: "harddemon",
   },
   {//ULTRA VIOLENCE
     name: "Ultra Violence", 
-    creator: "WOOGI1411"
+    creator: "WOOGI1411",
+    difficulty: "mediumdemon"
   },
   {//SKELETAL SHENANIGANS
     name: "Skeletal Shenanigans", 
-    creator: "WOOGI1411"
+    creator: "WOOGI1411",
+    difficulty: "mediumdemon",
   },
   {//B
     name: "B", 
-    creator: "WOOGI1411"
+    creator: "WOOGI1411",
+    difficulty: "mediumdemon",
   },
   {//SPEED OF LIGHT II
     name: "Speed of Light II", 
-    creator: "WOOGI1411"
+    creator: "WOOGI1411",
+    difficulty: "mediumdemon",
   },
 ];
 
@@ -58,7 +64,7 @@ difficultybonus = {
 
 //points calculation
 function getDemonPoints(rank, difficulty) {
-  const rankbonus = Math.max(350 - 3.5 * (rank - 1), 0);
+  const rankbonus = Math.max(700 - 7 * (rank - 1), 0);
   let bonus = difficultybonus[difficulty];
   return rankbonus + bonus;
 }
@@ -77,6 +83,7 @@ function loadDemonList() {
   demonlist.forEach((demon, i) => {
     const crazylist = document.createElement("div");
     crazylist.classList.add("listofdemons");
+    crazylist.id = `${demon.difficulty}`;
 
     crazylist.innerHTML = `#${i + 1} &emsp; ${demon.name}`;
 

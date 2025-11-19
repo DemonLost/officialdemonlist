@@ -1,5 +1,8 @@
-
-
+/*SCROLLBAR STYLING*/
+::-webkit-scrollbar {width: 0.8vw;}
+::-webkit-scrollbar-track {background: #313131;}
+::-webkit-scrollbar-thumb {background: var(--accent); border-radius: 1vw; border: 0.3vw solid #313131;}
+::-webkit-scrollbar-thumb:hover {background: var(--accent); border-radius: 1vw; border: 0.25vw solid #313131;}
 
 /*COLOR SCHEMES*/
 :root {
@@ -299,7 +302,7 @@ body {
 
 .switchlist {
     grid-area: switchlist;
-    height: 60vh;
+    height: 30vw;
 }
 
     .switchicon {
@@ -318,7 +321,7 @@ body {
 
 .demonname {
     grid-area: demonname;
-    height: 60vh;
+    height: 30vw;
     border-radius: 0.5vw;
     background-color: var(--bg-darkerer);
     overflow-y: scroll;
@@ -338,11 +341,16 @@ body {
         padding: 0.6vw 1vw;
         cursor: pointer;
         border-radius: 0.5vw;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;;
     }
 
+        #extremedemon:hover {background-color: #790000b0;}
+        #insanedemon:hover {background-color: #d40000B0;}
+        #harddemon:hover {background-color: #ff0000B0;}
+        #mediumdemon:hover {background-color: #ff24dbB0;}
+        #easydemon:hover {background-color: #b200e980;}
+
     .listofdemons:hover {
-        background-color: var(--accent-light);
         color: var(--text-light);
     }
 
@@ -357,7 +365,7 @@ body {
         'videotitle desc'
         'videolinkfr desc'
         'records other';
-    height: 60vh;
+    height: 30vw;
     gap: 0.5vw;
 }
 
