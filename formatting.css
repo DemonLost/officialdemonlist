@@ -345,8 +345,8 @@ body {
     }
 
         #extremedemon:hover {background-color: #790000b0;}
-        #insanedemon:hover {background-color: #d40000B0;}
-        #harddemon:hover {background-color: #ff0000B0;}
+        #insanedemon:hover {background-color: #ff0000b0;}
+        #harddemon:hover {background-color: #ff006ab0;}
         #mediumdemon:hover {background-color: #ff24dbB0;}
         #easydemon:hover {background-color: #b200e980;}
 
@@ -360,9 +360,9 @@ body {
     grid-area: description;
     display: grid;
     grid-template-rows: 1fr 4fr 2fr;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 19fr 7fr;
     grid-template-areas: 
-        'videotitle desc'
+        'videotitle tags'
         'videolinkfr desc'
         'records other';
     height: 30vw;
@@ -400,22 +400,38 @@ body {
         .verify {
             width: 32vw;
             height: 18vw;
+            border: none;
         }
+
+    .tagsfr {
+        grid-area: tags;
+        text-align: left;
+    }
 
     .desc {
         grid-area: desc;
     }
 
-        .descriptiontext {
+    .desctitle {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5vw;
+        font-weight: bold;
+        font-family: "Orbitron", sans-serif;
+        margin: 0;
+        padding-bottom: 0.5vw;
+        border-bottom: 0.1vw solid #14ff4f80;
+        color: #14ff4f40;
+        }    
+    
+    .descriptionpara {
             width: 100%;
-            height: 100%;
-            font-size: 1.2vw;
+            margin-top: 0.5vw;
+            font-size: 0.9vw;
             font-family: Arial, Helvetica, sans-serif;
             text-align: left;
-            overflow-y: scroll;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent-light) transparent;
             padding-right: 0.5vw;
+            text-align: justify;
         }
 
         .tags {
@@ -465,4 +481,22 @@ body {
 
     .other {
         grid-area: other;
+        }
+
+        .othertitle {
+            font-size: 1.5vw;
+            font-weight: bold;
+            font-family: "Orbitron", sans-serif;
+            margin: 0;
+            padding-bottom: 0.5vw;
+            border-bottom: 0.1vw solid #14ff4f80;
+            color: #14ff4f40;
+        }
+
+        .othercontent {
+            height: auto;
+            font-size: 0.8vw;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            margin-top: 0.5vw;
         }

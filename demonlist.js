@@ -11,18 +11,35 @@ const demonlist = [//DATA
     <span class="tags"> Timings </span> 
     <span class="tags"> Fast paced </span>
     `, 
-    videolink:"https://drive.google.com/file/d/1i2JYamEOTHlpftOvk68kjK8ZTO2oHFxn/preview",
+    description:`Windy Landscape is an insane demon created by WOOGI1411. It features fast-paced gameplay with a focus on flow and precise timings. Players will need to navigate through challenging sections while maintaining rhythm and control. Perfect for those looking to test their skills in a dynamic environment! Make sure to practice the timings, especially in the chokepoints!`,
+    videolink:"https://www.youtube.com/embed/hTX0Ch5bgMw?si=n6L3PBqez0s6Jq5z",
+    song: "Windfall - TheFatRat",
     record1:`As1nus`, record1pic:"as1nus", victor1link:"https://www.youtube.com/channel/UCV8Z4f8lXoO6r0kLhH8cX9A",
     record2:"Coldaf", record2pic:"coldaf",
+  },
+  {//FORTUNE TELLER
+    name: "Fortune Teller", 
+    creator: "Scrumpy & More",
+    difficulty: "harddemon",
+  },
+  {//CTRL ALT DEL
+    name: "Ctrl Alt Del", 
+    creator: "LeoSquared & More",
+    difficulty: "harddemon",
+  },
+  {//NINE CIRCLES
+    name: "Nine Circles", 
+    creator: "Zobros",
+    difficulty: "harddemon",
   },
   {//JAWBREAKER
     name: "Jawbreaker", 
     creator: "WOOGI1411",
     difficulty: "harddemon",
   },
-  {//NINE CIRCLES
-    name: "Nine Circles", 
-    creator: "Zobros",
+  {//ARTIFICIAL POWDER
+    name: "Artificial Powder", 
+    creator: "DRisccuN8",
     difficulty: "harddemon",
   },
   {//ULTRA VIOLENCE
@@ -113,9 +130,13 @@ function information(demon, i) {
       <iframe src="${demon.videolink}" class="verify"></iframe>
     </div>
 
+    <div class="tagsfr">
+      ${demon.tags ?? ""}
+    </div>
+
     <div class="desc">
-    ${demon.tags ?? ""}
-    <div class="descriptioncontent"> funny description </div>
+      <div class="desctitle"> Description </div>
+      <div class="descriptionpara"> ${demon.description} </div>
     </div>
 
     <div class="records">
@@ -126,7 +147,11 @@ function information(demon, i) {
     </div>
 
     <div class="other">
-      <div class="othercontent"> ${getDemonPoints(i + 1, demon.difficulty)} points</div>
+      <div class="othertitle"> List Information </div>
+      <div class="othercontent"> 
+        <strong> Points Awarded:</strong> ${getDemonPoints(i + 1, demon.difficulty)} <br>
+        <strong> Song:</strong> ${demon.song ?? "--"} 
+      </div>
     </div>
   `;
 
