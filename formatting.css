@@ -348,7 +348,7 @@ body {
         #insanedemon:hover {background-color: #ff0000b0;}
         #harddemon:hover {background-color: #ff006ab0;}
         #mediumdemon:hover {background-color: #ff24dbB0;}
-        #easydemon:hover {background-color: #b200e980;}
+        #easydemon:hover {background-color: #ce2cff80;}
 
     .listofdemons:hover {
         color: var(--text-light);
